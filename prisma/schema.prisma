@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum EnquiryStatus {
+  new
+  contacted
+  qualified
+  in_progress
+  converted
+  closed
+  spam
+}
+
+model Company {
+  id           String   @id @default(uuid()) @db.Uuid
+  name         String
+  legalName    String?  @map("legal_name")
+  email        String?
+  phone        String?
+  whatsapp     String?
+  website      String?
+  addressLine1 String?  @map("address_line_1")
+  addressLine2 String?  @map("address_line_2")
+  city         String?
+  state        String?
+  country      String?
+  postalCode   String?  @map("postal_code")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  enquiries Enquiry[]
+
+  @@map("company")
+}
+
+model Enquiry {
+  id          String        @id @default(uuid()) @db.Uuid
+  companyId   String        @db.Uuid @map("company_id")
+  name        String
+  email       String
+  companyName String?       @map("company_name")
+  phone       String?
+  service     String
+  message     String
+  status      EnquiryStatus @default(new)
+  source      String        @default("website")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+
+  company Company @relation(fields: [companyId], references: [id], onDelete: Restrict)
+  events  EnquiryEvent[]
+
+  @@index([companyId])
+  @@index([status])
+  @@index([createdAt])
+  @@map("enquiries")
+}
+
+model EnquiryEvent {
+  id        String   @id @default(uuid()) @db.Uuid
+  enquiryId String   @db.Uuid @map("enquiry_id")
+  eventType String   @map("event_type")
+  metadata  Json?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  enquiry Enquiry @relation(fields: [enquiryId], references: [id], onDelete: Cascade)
+
+  @@index([enquiryId])
+  @@index([eventType])
+  @@index([createdAt])
+  @@map("enquiry_events")
+}
