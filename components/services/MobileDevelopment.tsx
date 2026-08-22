@@ -38,7 +38,7 @@ export default function MobileDevelopment() {
   return (
     <section
       id="mobile-development"
-      className="border-t border-[#E4E7EC] bg-[#F8FAFC]"
+      className="scroll-mt-24 border-t border-[#E4E7EC] bg-[#F8FAFC]"
     >
       <div className="mx-auto max-w-7xl px-6 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
         {/* Header */}

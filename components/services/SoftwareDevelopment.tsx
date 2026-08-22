@@ -41,7 +41,7 @@ export default function SoftwareDevelopment() {
   return (
     <section
       id="software-development"
-      className="border-t border-[#E4E7EC] bg-[#F8FAFC]"
+      className="scroll-mt-24 border-t border-[#E4E7EC] bg-[#F8FAFC]"
     >
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
         {/* Header */}
@@ -65,13 +65,13 @@ export default function SoftwareDevelopment() {
           <div className="max-w-2xl lg:justify-self-end">
             <p className="text-base leading-7 text-[#344054] sm:text-lg sm:leading-8">
               We build software that helps businesses manage operations,
-              simplify workflows, connect information and create better ways
-              of working.
+              simplify workflows, connect information and create better ways of
+              working.
             </p>
 
             <p className="mt-4 text-sm leading-6 text-[#667085] sm:text-base sm:leading-7">
-              From focused business applications to larger digital platforms,
-              we combine practical thinking, modern technology and intelligent
+              From focused business applications to larger digital platforms, we
+              combine practical thinking, modern technology and intelligent
               capabilities to create solutions that can grow with your
               organisation.
             </p>
@@ -98,9 +98,9 @@ export default function SoftwareDevelopment() {
               </h3>
 
               <p className="relative mt-5 max-w-2xl text-sm leading-7 text-[#98A2B3] sm:text-base sm:leading-8">
-                Good business software should make work clearer, faster and
-                more connected. We focus on understanding the workflow first,
-                then building the digital system around it.
+                Good business software should make work clearer, faster and more
+                connected. We focus on understanding the workflow first, then
+                building the digital system around it.
               </p>
 
               <div className="relative mt-8 flex flex-wrap gap-2">

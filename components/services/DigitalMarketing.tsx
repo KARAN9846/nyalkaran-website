@@ -44,7 +44,7 @@ export default function DigitalMarketing() {
   return (
     <section
       id="digital-marketing"
-      className="relative overflow-hidden border-t border-[#E4E7EC] bg-[#F8FAFC] text-[#101828]"
+      className="scroll-mt-24 relative overflow-hidden border-t border-[#E4E7EC] bg-[#F8FAFC] text-[#101828]"
     >
       {/* Ambient glow */}
       <div

@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -22,15 +22,12 @@ export function ServicesPreview() {
           <h2 className="mt-4 text-4xl font-extrabold leading-[1.05] tracking-[-0.035em] text-[#101828] sm:text-5xl">
             Technology that moves
             <br />
-            <span className="text-[#F65011]">
-              businesses forward.
-            </span>
+            <span className="text-[#F65011]">businesses forward.</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#667085] sm:text-base lg:mx-0">
-            From business software to digital experiences and growth
-            strategies, we help turn business requirements into practical
-            digital solutions.
+            From business software to digital experiences and growth strategies,
+            we help turn business requirements into practical digital solutions.
           </p>
         </div>
 
@@ -44,42 +41,21 @@ export function ServicesPreview() {
               const isActive = activeService === index;
 
               return (
-                <button
+                <Link
                   key={service.number}
-                  type="button"
+                  href={service.href}
                   onMouseEnter={() => setActiveService(index)}
                   onFocus={() => setActiveService(index)}
-                  onClick={() => setActiveService(index)}
-                  aria-pressed={isActive}
-                  className={`
-                    relative
-                    flex
-                    min-h-[60px]
-                    w-full
-                    items-center
-                    rounded-2xl
-                    border
-                    px-4
-                    py-3.5
-                    pr-12
-                    text-left
-                    transition-colors
-                    duration-200
-                    sm:min-h-[68px]
-                    sm:px-5
-                    lg:min-h-[72px]
-                    ${
-                      isActive
-                        ? "border-[#F65011]/20 bg-white shadow-[0_12px_35px_rgba(16,24,40,0.06)]"
-                        : "border-transparent bg-transparent hover:border-[#E4E7EC] hover:bg-white"
-                    }
-                  `}
+                  aria-label={`View ${service.title}`}
+                  className={`group relative flex min-h-[60px] w-full items-center rounded-2xl border px-4 py-3.5 pr-12 text-left transition-all duration-200 sm:min-h-[68px] sm:px-5 lg:min-h-[72px] ${
+                    isActive
+                      ? "border-[#F65011]/20 bg-white shadow-[0_12px_35px_rgba(16,24,40,0.06)]"
+                      : "border-transparent bg-transparent hover:border-[#E4E7EC] hover:bg-white"
+                  }`}
                 >
                   <span
                     className={`mr-4 shrink-0 text-xs font-bold ${
-                      isActive
-                        ? "text-[#F65011]"
-                        : "text-[#98A2B3]"
+                      isActive ? "text-[#F65011]" : "text-[#98A2B3]"
                     }`}
                   >
                     {service.number}
@@ -87,9 +63,7 @@ export function ServicesPreview() {
 
                   <span
                     className={`min-w-0 flex-1 text-sm font-bold leading-5 sm:text-base lg:text-lg ${
-                      isActive
-                        ? "text-[#101828]"
-                        : "text-[#667085]"
+                      isActive ? "text-[#101828]" : "text-[#667085]"
                     }`}
                   >
                     {service.title}
@@ -97,17 +71,16 @@ export function ServicesPreview() {
 
                   <ArrowUpRight
                     size={17}
-                    className={`absolute right-4 top-1/2 -translate-y-1/2 ${
+                    className={`absolute right-4 top-1/2 -translate-y-1/2 transition-all duration-200 ${
                       isActive
                         ? "text-[#F65011]"
-                        : "text-[#D0D5DD]"
+                        : "text-[#D0D5DD] group-hover:translate-x-0.5 group-hover:-translate-y-[3px] group-hover:text-[#F65011]"
                     }`}
                   />
-                </button>
+                </Link>
               );
             })}
           </div>
-
           {/* =====================================================
               SERVICE DETAIL
           ====================================================== */}
@@ -135,10 +108,7 @@ export function ServicesPreview() {
                 </span>
 
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 sm:h-11 sm:w-11">
-                  <ArrowUpRight
-                    size={18}
-                    className="text-[#F65011]"
-                  />
+                  <ArrowUpRight size={18} className="text-[#F65011]" />
                 </div>
               </div>
 
@@ -172,10 +142,7 @@ export function ServicesPreview() {
                     "
                   >
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F65011]/15">
-                      <Check
-                        size={13}
-                        className="text-[#F65011]"
-                      />
+                      <Check size={13} className="text-[#F65011]" />
                     </span>
 
                     <span className="text-xs leading-5 text-white/80">
@@ -187,17 +154,16 @@ export function ServicesPreview() {
 
               {/* Footer */}
               <div className="relative mt-7 border-t border-white/10 pt-5 lg:mt-auto">
-                <a
+                <Link
                   href="/services"
                   className="group inline-flex items-center gap-2 text-sm font-bold text-white"
                 >
                   Explore all services
-
                   <ArrowUpRight
                     size={16}
                     className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

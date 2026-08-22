@@ -2,6 +2,7 @@ export const services = [
   {
     number: "01",
     title: "Software Development",
+    href: "/services#software-development",
     shortTitle: "Software",
     description:
       "Custom software, CRM, ERP and business automation solutions designed around the way your business works.",
@@ -16,6 +17,7 @@ export const services = [
   {
     number: "02",
     title: "Web Development",
+    href: "/services#web-development",
     shortTitle: "Web",
     description:
       "High-performance websites, web applications, e-commerce platforms and portals built for modern businesses.",
@@ -24,6 +26,7 @@ export const services = [
   {
     number: "03",
     title: "Mobile Development",
+    href: "/services#mobile-development",
     shortTitle: "Mobile",
     description:
       "Mobile experiences designed for Android, iOS and cross-platform environments.",
@@ -36,6 +39,7 @@ export const services = [
   {
     number: "04",
     title: "Digital Marketing",
+    href: "/services#digital-marketing",
     shortTitle: "Marketing",
     description:
       "Digital growth strategies that help businesses reach the right audience and build a stronger online presence.",

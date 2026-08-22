@@ -1,7 +1,113 @@
+// "use client";
+
+// import Link from "next/link";
+// import { Menu, X } from "lucide-react";
+// import { useState } from "react";
+// import { Container } from "../ui/Container";
+
+// const navigation = [
+//   { label: "Home", href: "/" },
+//   { label: "About Us", href: "/about" },
+//   { label: "Services", href: "/services" },
+//   { label: "Contact Us", href: "/contact" },
+// ];
+
+// export function Navbar() {
+//   const [mobileOpen, setMobileOpen] = useState(false);
+
+//   return (
+//     <header className="sticky top-0 z-50 border-b border-[#E4E7EC]/80 bg-white/90 backdrop-blur-xl">
+//       <Container>
+//         <div className="flex h-20 items-center justify-between">
+//           {/* Logo */}
+//           <Link
+//             href="/"
+//             className="flex items-center"
+//             aria-label="Nyalkaran Technosoft LLP home"
+//           >
+//             <div className="leading-none">
+//               <div className="font-[var(--font-manrope)] text-2xl font-extrabold tracking-tight text-[#F65011]">
+//                 Nyalkaran
+//               </div>
+
+//               <div className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] text-[#1D2939]">
+//                 Technosoft LLP
+//               </div>
+//             </div>
+//           </Link>
+
+//           {/* Desktop Navigation */}
+//           <nav
+//             className="hidden items-center gap-8 md:flex"
+//             aria-label="Main navigation"
+//           >
+//             {navigation.map((item) => (
+//               <Link
+//                 key={item.href}
+//                 href={item.href}
+//                 className="text-sm font-medium text-[#344054] transition-colors duration-200 hover:text-[#F65011]"
+//               >
+//                 {item.label}
+//               </Link>
+//             ))}
+//           </nav>
+
+//           {/* Desktop CTA */}
+//           <Link
+//             href="/contact"
+//             className="hidden items-center rounded-xl bg-[#F65011] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] md:inline-flex"
+//           >
+//             Let's Talk
+//           </Link>
+
+//           {/* Mobile menu button */}
+//           <button
+//             type="button"
+//             onClick={() => setMobileOpen((open) => !open)}
+//             className="inline-flex rounded-lg p-2 text-[#101828] md:hidden"
+//             aria-label={mobileOpen ? "Close menu" : "Open menu"}
+//             aria-expanded={mobileOpen}
+//           >
+//             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+//           </button>
+//         </div>
+
+//         {/* Mobile navigation */}
+//         {mobileOpen && (
+//           <div className="border-t border-[#E4E7EC] py-5 md:hidden">
+//             <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
+//               {navigation.map((item) => (
+//                 <Link
+//                   key={item.href}
+//                   href={item.href}
+//                   onClick={() => setMobileOpen(false)}
+//                   className="rounded-lg px-3 py-3 text-sm font-medium text-[#344054] hover:bg-[#F8FAFC] hover:text-[#F65011]"
+//                 >
+//                   {item.label}
+//                 </Link>
+//               ))}
+
+//               <Link
+//                 href="/contact"
+//                 onClick={() => setMobileOpen(false)}
+//                 className="mt-2 rounded-xl bg-[#F65011] px-4 py-3 text-center text-sm font-semibold text-white"
+//               >
+//                 Let's Talk
+//               </Link>
+//             </nav>
+//           </div>
+//         )}
+//       </Container>
+//     </header>
+//   );
+// }
+
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Container } from "../ui/Container";
 
@@ -13,7 +119,11 @@ const navigation = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hoveredPath, setHoveredPath] = useState<string | null>(null);
+
+  const highlightedPath = hoveredPath ?? pathname;
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#E4E7EC]/80 bg-white/90 backdrop-blur-xl">
@@ -25,31 +135,45 @@ export function Navbar() {
             className="flex items-center"
             aria-label="Nyalkaran Technosoft LLP home"
           >
-            <div className="leading-none">
-              <div className="font-[var(--font-manrope)] text-2xl font-extrabold tracking-tight text-[#F65011]">
-                Nyalkaran
-              </div>
-
-              <div className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] text-[#1D2939]">
-                Technosoft LLP
-              </div>
-            </div>
+            <Image
+              src="/images/nyalkaran-logo.svg"
+              alt="Nyalkaran Technosoft LLP"
+              width={160}
+              height={55}
+              priority
+              className="h-auto w-[160px]"
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <nav
             className="hidden items-center gap-8 md:flex"
             aria-label="Main navigation"
+            onMouseLeave={() => setHoveredPath(null)}
           >
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-[#344054] transition-colors duration-200 hover:text-[#F65011]"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isHighlighted = highlightedPath === item.href;
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onMouseEnter={() => setHoveredPath(item.href)}
+                  className={`relative text-sm font-medium transition-colors duration-200 ${
+                    isHighlighted ? "text-[#F65011]" : "text-[#344054]"
+                  }`}
+                >
+                  {item.label}
+
+                  <span
+                    aria-hidden="true"
+                    className={`absolute -bottom-2 left-0 h-0.5 rounded-full bg-[#F65011] transition-all duration-200 ${
+                      isHighlighted ? "w-full" : "w-0"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Desktop CTA */}
@@ -81,7 +205,11 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-3 text-sm font-medium text-[#344054] hover:bg-[#F8FAFC] hover:text-[#F65011]"
+                  className={`rounded-lg border-l-2 px-3 py-3 text-sm font-medium transition-all duration-200 ${
+                    pathname === item.href
+                      ? "border-[#F65011] bg-[#FFF4EF] text-[#F65011]"
+                      : "border-transparent text-[#344054] hover:border-[#F65011] hover:bg-[#F8FAFC] hover:text-[#F65011]"
+                  }`}
                 >
                   {item.label}
                 </Link>

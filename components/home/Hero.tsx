@@ -167,7 +167,6 @@ export function Hero() {
                 "
               >
                 Start Your Project
-
                 <ArrowRight
                   size={17}
                   className="transition-transform duration-300 group-hover:translate-x-1"
@@ -250,7 +249,7 @@ export function Hero() {
           {/* RIGHT PROCESS CARD */}
           <div className="mx-auto w-full max-w-xl">
             <div
-  className="
+              className="
     h-[500px]
     overflow-hidden
     rounded-[28px]
@@ -264,7 +263,7 @@ export function Hero() {
     lg:h-[580px]
     lg:p-7
   "
->
+            >
               <div className="relative flex h-full flex-col">
                 {/* Card header */}
                 <div className="flex shrink-0 items-start justify-between gap-3 sm:gap-5">
@@ -346,11 +345,7 @@ export function Hero() {
                             font-bold
                             sm:w-8
                             sm:text-xs
-                            ${
-                              isActive
-                                ? "text-[#F65011]"
-                                : "text-[#98A2B3]"
-                            }
+                            ${isActive ? "text-[#F65011]" : "text-[#98A2B3]"}
                           `}
                         >
                           {step.number}
@@ -364,11 +359,7 @@ export function Hero() {
                             text-[13px]
                             font-bold
                             sm:text-sm
-                            ${
-                              isActive
-                                ? "text-[#101828]"
-                                : "text-[#667085]"
-                            }
+                            ${isActive ? "text-[#101828]" : "text-[#667085]"}
                           `}
                         >
                           {step.title}
@@ -396,10 +387,11 @@ export function Hero() {
 
                 {/* Footer */}
                 <div className="mt-auto shrink-0 border-t border-[#E4E7EC] pt-3 sm:pt-4">
-  <p className="max-w-xl text-[11px] leading-5 text-[#667085] sm:text-xs">
-    From an idea in your mind to a product in the hands of your customers.
-  </p>
-</div>
+                  <p className="max-w-xl text-[11px] leading-5 text-[#667085] sm:text-xs">
+                    From an idea in your mind to a product in the hands of your
+                    customers.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
