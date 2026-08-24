@@ -174,7 +174,7 @@ export function Hero() {
               </a>
 
               <a
-                href="#"
+                href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project."
                 className="
                   inline-flex
                   w-full

@@ -38,165 +38,341 @@ export default function SoftwareDevelopment() {
     },
   ];
 
+  const highlights = [
+    "Business-focused workflows",
+    "Centralised information",
+    "Automation where useful",
+    "Connected systems",
+    "Scalable architecture",
+    "AI-enabled capabilities",
+  ];
+
   return (
     <section
       id="software-development"
       className="scroll-mt-24 border-t border-[#E4E7EC] bg-[#F8FAFC]"
     >
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+      <div className="mx-auto max-w-7xl px-6 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
         {/* Header */}
-        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <div>
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2">
               <span className="flex h-8 min-w-8 items-center justify-center rounded-full bg-[#F65011] px-2 text-[11px] font-bold text-white">
                 01
               </span>
-
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#F65011]">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#F65011] sm:text-sm">
                 Software Development
               </span>
             </div>
 
-            <h2 className="mt-5 max-w-2xl text-3xl font-bold tracking-[-0.04em] text-[#101828] sm:text-4xl lg:text-5xl">
-              Digital systems designed around your business.
+            <h2 className="mt-4 text-3xl font-bold tracking-[-0.045em] text-[#101828] sm:text-4xl lg:text-5xl">
+              Digital systems built around{" "}
+              <span className="text-[#F65011]">
+                the way your business works.
+              </span>
             </h2>
           </div>
 
-          <div className="max-w-2xl lg:justify-self-end">
-            <p className="text-base leading-7 text-[#344054] sm:text-lg sm:leading-8">
-              We build software that helps businesses manage operations,
-              simplify workflows, connect information and create better ways of
-              working.
-            </p>
-
-            <p className="mt-4 text-sm leading-6 text-[#667085] sm:text-base sm:leading-7">
-              From focused business applications to larger digital platforms, we
-              combine practical thinking, modern technology and intelligent
-              capabilities to create solutions that can grow with your
-              organisation.
-            </p>
-          </div>
+          <p className="max-w-xl text-sm leading-6 text-[#667085] sm:text-base sm:leading-7 lg:pb-1">
+            We build practical software that connects operations, information,
+            teams and customers into systems that are easier to manage and ready
+            to grow.
+          </p>
         </div>
 
-        {/* Main Feature */}
-        <div className="mt-10 overflow-hidden rounded-[2rem] bg-[#101828] sm:mt-12">
-          <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
-            {/* Main message */}
-            <div className="relative p-7 sm:p-9 lg:p-11">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-[#F65011]/10 blur-3xl"
-              />
+        {/* Main Showcase */}
+        <div className="group/showcase relative mt-8 overflow-hidden rounded-[2rem] border border-[#E4E7EC] bg-[#F8FAFC] shadow-[0_18px_55px_rgba(16,24,40,0.06)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#F65011]/20 hover:shadow-[0_28px_70px_rgba(16,24,40,0.09)] sm:mt-10">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#F65011]/0 blur-3xl transition-all duration-700 group-hover/showcase:bg-[#F65011]/10"
+          />
 
-              <p className="relative text-xs font-semibold uppercase tracking-[0.16em] text-[#F65011]">
-                Built around the business
-              </p>
+          <div className="relative grid lg:grid-cols-[1.15fr_0.85fr]">
+            {/* Software application visualization */}
+            <div className="p-4 sm:p-6 lg:p-7">
+              <div className="group/software relative overflow-hidden rounded-[1.5rem] border border-[#D0D5DD] bg-white shadow-[0_15px_40px_rgba(16,24,40,0.06)] transition-all duration-500 group-hover/showcase:shadow-[0_20px_45px_rgba(16,24,40,0.09)]">
+                {/* Application bar */}
+                <div className="flex items-center gap-2 border-b border-[#E4E7EC] bg-[#F8FAFC] px-4 py-3">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#D0D5DD]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#D0D5DD]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#D0D5DD]" />
 
-              <h3 className="relative mt-4 max-w-2xl text-2xl font-bold tracking-[-0.035em] text-white sm:text-3xl lg:text-4xl">
-                Turn complex business requirements into software people can
-                actually use.
-              </h3>
+                  <div className="ml-2 flex h-7 min-w-0 flex-1 items-center rounded-md border border-[#E4E7EC] bg-white px-3">
+                    <span className="truncate text-[10px] text-[#98A2B3]">
+                      business.workspace
+                    </span>
+                  </div>
 
-              <p className="relative mt-5 max-w-2xl text-sm leading-7 text-[#98A2B3] sm:text-base sm:leading-8">
-                Good business software should make work clearer, faster and more
-                connected. We focus on understanding the workflow first, then
-                building the digital system around it.
-              </p>
-
-              <div className="relative mt-8 flex flex-wrap gap-2">
-                {[
-                  "Workflow Automation",
-                  "AI Capabilities",
-                  "Business Intelligence",
-                  "System Integration",
-                ].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs font-medium text-[#D0D5DD]"
-                  >
-                    {item}
+                  <span className="hidden rounded-full bg-[#F65011]/10 px-2.5 py-1 text-[9px] font-semibold text-[#F65011] sm:block">
+                    Live
                   </span>
-                ))}
+                </div>
+
+                <div className="grid min-h-[330px] sm:min-h-[360px] sm:grid-cols-[125px_1fr]">
+                  {/* Sidebar */}
+                  <aside className="hidden border-r border-[#E4E7EC] bg-[#F8FAFC] p-4 sm:block">
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#101828] text-[10px] font-bold text-white">
+                        N
+                      </span>
+                      <span className="text-[10px] font-bold text-[#101828]">
+                        WORKSPACE
+                      </span>
+                    </div>
+
+                    <div className="mt-7 space-y-2">
+                      <span className="flex h-8 items-center rounded-lg bg-[#F65011]/10 px-2.5 text-[9px] font-semibold text-[#F65011]">
+                        Overview
+                      </span>
+                      <span className="flex h-8 items-center px-2.5 text-[9px] text-[#98A2B3]">
+                        Customers
+                      </span>
+                      <span className="flex h-8 items-center px-2.5 text-[9px] text-[#98A2B3]">
+                        Operations
+                      </span>
+                      <span className="flex h-8 items-center px-2.5 text-[9px] text-[#98A2B3]">
+                        Reports
+                      </span>
+                    </div>
+
+                    <div className="mt-8 border-t border-[#E4E7EC] pt-4">
+                      <span className="text-[8px] font-semibold uppercase tracking-[0.12em] text-[#98A2B3]">
+                        System
+                      </span>
+                      <span className="mt-3 flex h-8 items-center px-2.5 text-[9px] text-[#98A2B3]">
+                        Settings
+                      </span>
+                    </div>
+                  </aside>
+
+                  {/* Dashboard */}
+                  <div className="relative overflow-hidden p-4 sm:p-5">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="text-[9px] font-semibold uppercase tracking-[0.12em] text-[#98A2B3]">
+                          Business overview
+                        </span>
+                        <h4 className="mt-1 text-sm font-bold tracking-[-0.02em] text-[#101828] sm:text-base">
+                          Operations dashboard
+                        </h4>
+                      </div>
+                      <span className="rounded-lg border border-[#E4E7EC] bg-white px-2.5 py-1.5 text-[9px] font-semibold text-[#667085]">
+                        This month
+                      </span>
+                    </div>
+
+                    {/* KPI cards */}
+                    <div className="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+                      {[
+                        ["Customers", "1,248", "+12%"],
+                        ["Processes", "86", "Active"],
+                        ["Efficiency", "94%", "+8%"],
+                      ].map(([label, value, change], index) => (
+                        <div
+                          key={label}
+                          className={`${index === 2 ? "hidden sm:block" : ""} rounded-xl border border-[#E4E7EC] bg-[#F8FAFC] p-3 transition-transform duration-700 ease-out group-hover/software:-translate-y-1`}
+                        >
+                          <span className="text-[8px] text-[#98A2B3]">
+                            {label}
+                          </span>
+                          <div className="mt-1 flex items-end justify-between gap-2">
+                            <strong className="text-sm font-bold text-[#101828]">
+                              {value}
+                            </strong>
+                            <span className="text-[8px] font-semibold text-[#F65011]">
+                              {change}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Workflow + automation */}
+                    <div className="mt-3 grid gap-3 sm:grid-cols-[1.35fr_0.65fr]">
+                      <div className="rounded-xl border border-[#E4E7EC] bg-white p-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-[8px] font-semibold uppercase tracking-[0.1em] text-[#98A2B3]">
+                            Workflow performance
+                          </span>
+                          <span className="text-[8px] font-semibold text-[#F65011]">
+                            +24.8%
+                          </span>
+                        </div>
+
+                        <div className="relative mt-4 h-[115px] overflow-hidden rounded-lg bg-[#F8FAFC]">
+                          <div className="absolute inset-x-0 top-1/4 h-px bg-[#E4E7EC]" />
+                          <div className="absolute inset-x-0 top-1/2 h-px bg-[#E4E7EC]" />
+                          <div className="absolute inset-x-0 top-3/4 h-px bg-[#E4E7EC]" />
+
+                          <svg
+                            viewBox="0 0 420 120"
+                            className="absolute inset-0 h-full w-full"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M10 96 C70 92,78 78,125 82 S190 62,225 66 S285 44,315 48 S365 22,410 26"
+                              fill="none"
+                              stroke="#F65011"
+                              strokeWidth="3"
+                              strokeLinecap="round"
+                            />
+                            <circle cx="125" cy="82" r="4" fill="#F65011" />
+                            <circle cx="225" cy="66" r="4" fill="#F65011" />
+                            <circle cx="315" cy="48" r="4" fill="#F65011" />
+                            <circle cx="410" cy="26" r="5" fill="#F65011" />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div className="rounded-xl bg-[#101828] p-3">
+                        <span className="text-[8px] font-semibold uppercase tracking-[0.1em] text-[#98A2B3]">
+                          Automation
+                        </span>
+
+                        <div className="mt-4 space-y-2.5">
+                          <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] p-2">
+                            <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[#F65011]/15 text-[9px] font-bold text-[#F65011]">
+                              01
+                            </span>
+                            <span className="text-[8px] font-medium text-[#D0D5DD]">
+                              New enquiry
+                            </span>
+                          </div>
+
+                          <div className="ml-3 h-3 border-l border-dashed border-[#F65011]/40" />
+
+                          <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] p-2">
+                            <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[#F65011]/15 text-[9px] font-bold text-[#F65011]">
+                              02
+                            </span>
+                            <span className="text-[8px] font-medium text-[#D0D5DD]">
+                              Workflow runs
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Floating status */}
+                    <div className="absolute right-4 top-16 z-20 rounded-xl border border-[#E4E7EC] bg-white px-3 py-2 shadow-[0_10px_25px_rgba(16,24,40,0.09)] transition-all duration-700 ease-out group-hover/software:-translate-y-1 group-hover/software:translate-x-1 sm:right-6">
+                      <div className="flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-[#F65011]" />
+                        <span className="text-[9px] font-semibold text-[#344054]">
+                          System running
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom indicator */}
+                <div className="border-t border-[#E4E7EC] bg-[#F8FAFC] px-4 py-3 sm:px-5">
+                  <div className="grid grid-cols-3 gap-2">
+                    <span className="h-1 rounded-full bg-[#F65011] transition-all duration-700 group-hover/software:shadow-[0_0_12px_rgba(246,80,17,0.4)]" />
+                    <span className="h-1 rounded-full bg-[#E4E7EC]" />
+                    <span className="h-1 rounded-full bg-[#E4E7EC]" />
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Outcome panel */}
-            <div className="border-t border-white/10 bg-white/[0.025] p-7 sm:p-9 lg:border-l lg:border-t-0 lg:p-11">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#98A2B3]">
-                What it can improve
-              </p>
+            {/* Dark capability panel */}
+            <div className="relative border-t border-white/10 bg-[#101828] p-6 sm:p-8 lg:border-l lg:border-t-0 lg:p-9">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -bottom-20 -right-20 h-48 w-48 rounded-full bg-[#F65011]/10 blur-3xl"
+              />
 
-              <ul className="mt-6 space-y-3">
-                {[
-                  "Reduce repetitive manual work",
-                  "Centralise important information",
-                  "Improve operational visibility",
-                  "Connect teams and systems",
-                  "Create better customer workflows",
-                  "Prepare the business for future growth",
-                ].map((item, index) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3"
-                  >
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#F65011]/15 text-[10px] font-bold text-[#F65011]">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+              <div className="relative">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#F65011]">
+                  Built to work
+                </p>
 
-                    <span className="text-sm leading-6 text-[#D0D5DD]">
-                      {item}
+                <h3 className="mt-3 text-2xl font-bold tracking-[-0.035em] text-white sm:text-3xl">
+                  More than an application.
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[#98A2B3]">
+                  Good software should make work clearer, faster and more
+                  connected — helping your teams spend less time managing
+                  systems and more time moving the business forward.
+                </p>
+
+                <ul className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
+                  {highlights.map((item, index) => (
+                    <li
+                      key={item}
+                      className="group/item flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-2.5 transition-all duration-500 hover:border-[#F65011]/30 hover:bg-white/[0.05]"
+                    >
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F65011]/10 text-[9px] font-bold text-[#F65011] transition-all duration-500 group-hover/item:bg-[#F65011] group-hover/item:text-white">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-xs font-medium text-[#D0D5DD]">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 border-t border-white/10 pt-5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-[#667085]">Foundation</span>
+                    <span className="text-sm font-semibold text-white">
+                      Process
+                      <span className="mx-2 text-[#F65011]">+</span>
+                      Technology
+                      <span className="mx-2 text-[#F65011]">+</span>
+                      Growth
                     </span>
-                  </li>
-                ))}
-              </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Capabilities */}
-        <div className="mt-6">
-          <div className="flex items-center justify-between">
+        <div className="mt-7">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#98A2B3]">
-                Capabilities
+                Software capabilities
               </p>
-
               <p className="mt-1 text-sm text-[#667085]">
                 Built around real business needs.
               </p>
             </div>
 
-            <span
-              aria-hidden="true"
-              className="hidden h-px w-20 bg-[#E4E7EC] sm:block"
-            />
+            <span className="hidden text-xs font-medium text-[#98A2B3] sm:block">
+              Business Software · Enterprise Apps · CRM · ERP · Automation ·
+              Integration
+            </span>
           </div>
 
-          <ol className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((capability) => (
               <li
                 key={capability.number}
-                className="group rounded-2xl border border-[#E4E7EC] bg-white p-5 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#F65011]/25 hover:shadow-[0_16px_35px_rgba(16,24,40,0.07)]"
+                className="group rounded-2xl border border-[#E4E7EC] bg-white p-5 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#F65011]/25 hover:shadow-[0_15px_32px_rgba(16,24,40,0.07)]"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-[#F65011]">
                     {capability.number}
                   </span>
-
-                  <span className="text-sm text-[#98A2B3] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#F65011]">
+                  <span className="text-sm text-[#98A2B3] transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5 group-hover:text-[#F65011]">
                     ↗
                   </span>
                 </div>
 
-                <h4 className="mt-6 text-lg font-bold tracking-[-0.02em] text-[#101828] transition-transform duration-500 group-hover:translate-x-1">
+                <h4 className="mt-4 text-base font-bold tracking-[-0.02em] text-[#101828] transition-transform duration-500 group-hover:translate-x-1 sm:text-lg">
                   {capability.title}
                 </h4>
 
-                <p className="mt-2 text-sm leading-6 text-[#667085]">
+                <p className="mt-1.5 text-xs leading-5 text-[#667085] sm:text-sm sm:leading-6">
                   {capability.description}
                 </p>
 
-                <div className="mt-5 h-px overflow-hidden bg-[#E4E7EC]">
+                <div className="mt-4 h-px overflow-hidden bg-[#E4E7EC]">
                   <div className="h-full w-0 bg-[#F65011] transition-all duration-700 ease-out group-hover:w-full" />
                 </div>
               </li>

@@ -415,41 +415,48 @@ export function HowWeGrow() {
                 {/* ---------------------------------------------
                     GROWTH LABEL
                 ---------------------------------------------- */}
+                {/* ---------------------------------------------
+    GROWTH LABEL
+---------------------------------------------- */}
                 <div
                   className="
-                    absolute
-                    right-[1%]
-                    top-0
-                    z-20
-                    text-right
-                    sm:right-[1.5%]
-                  "
+    pointer-events-none
+    absolute
+    left-[68%]
+    top-0
+    z-30
+    text-left
+    sm:left-[72%]
+    lg:left-[76%]
+  "
                 >
                   <span
                     className="
-                      block
-                      text-[7px]
-                      font-bold
-                      uppercase
-                      tracking-[0.16em]
-                      text-white/35
-                      sm:text-[9px]
-                    "
+      block
+      text-[7px]
+      font-bold
+      uppercase
+      leading-none
+      tracking-[0.16em]
+      text-white/35
+      sm:text-[9px]
+    "
                   >
                     Growth
                   </span>
 
                   <span
                     className="
-                      mt-0.5
-                      inline-flex
-                      items-center
-                      gap-0.5
-                      text-[8px]
-                      font-bold
-                      text-[#F65011]
-                      sm:text-[10px]
-                    "
+      mt-1
+      inline-flex
+      items-center
+      gap-0.5
+      text-[8px]
+      font-bold
+      leading-none
+      text-[#F65011]
+      sm:text-[10px]
+    "
                   >
                     Forward
                     <ArrowUpRight
@@ -458,7 +465,6 @@ export function HowWeGrow() {
                     />
                   </span>
                 </div>
-
                 {/* ---------------------------------------------
                     STEP NUMBERS / LABELS
                     No descriptions / no progress bars

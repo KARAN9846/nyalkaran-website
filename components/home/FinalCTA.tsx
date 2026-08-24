@@ -41,12 +41,12 @@ export default function FinalCTA() {
                 Start Your Project
               </a>
 
-       <a
-  href="#"
-  className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/[0.06] px-6 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F65011]/50 hover:bg-[#F65011]/10 hover:!text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
->
-  WhatsApp Us
-</a>
+              <a
+                href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/[0.06] px-6 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F65011]/50 hover:bg-[#F65011]/10 hover:!text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
+              >
+                WhatsApp Us
+              </a>
             </div>
           </div>
 
