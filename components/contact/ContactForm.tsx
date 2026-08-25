@@ -1,13 +1,39 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import {
+  Code2,
+  Globe2,
+  Smartphone,
+  TrendingUp,
+  MessageCircleQuestion,
+  type LucideIcon,
+} from "lucide-react";
 
-const services = [
-  "Software",
-  "Web",
-  "Mobile",
-  "Digital Marketing",
-  "Something Else",
+const services: {
+  name: string;
+  icon: LucideIcon;
+}[] = [
+  {
+    name: "Software",
+    icon: Code2,
+  },
+  {
+    name: "Web",
+    icon: Globe2,
+  },
+  {
+    name: "Mobile",
+    icon: Smartphone,
+  },
+  {
+    name: "Digital Marketing",
+    icon: TrendingUp,
+  },
+  {
+    name: "Something Else",
+    icon: MessageCircleQuestion,
+  },
 ];
 
 type FormErrors = {
@@ -133,18 +159,41 @@ export default function ContactForm() {
             </p>
 
             {/* Service list */}
+            {/* Service list */}
             <div className="mt-8 space-y-3">
-              {services.map((service, index) => (
-                <div key={service} className="flex items-center gap-3">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#FFF3EE] text-[10px] font-bold text-[#F65011]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+              {services.map((service) => {
+                const Icon = service.icon;
 
-                  <span className="text-sm font-medium text-[#344054]">
-                    {service}
-                  </span>
-                </div>
-              ))}
+                return (
+                  <div
+                    key={service.name}
+                    className="grid grid-cols-[40px_1fr] items-center gap-4"
+                  >
+                    {/* Service Icon */}
+                    <span
+                      className="
+            flex h-10 w-10 items-center justify-center
+            rounded-full
+            bg-[#F65011]
+            text-white
+          "
+                    >
+                      <Icon size={17} strokeWidth={2} aria-hidden="true" />
+                    </span>
+
+                    {/* Service Name */}
+                    <span
+                      className="
+            flex min-h-10 items-center
+            text-sm font-medium leading-5
+            text-[#344054]
+          "
+                    >
+                      {service.name}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
 
             {/* Process */}
@@ -279,14 +328,14 @@ export default function ContactForm() {
 
               <div className="mt-3 flex flex-wrap gap-2">
                 {services.map((service) => {
-                  const isSelected = selectedService === service;
+                  const isSelected = selectedService === service.name;
 
                   return (
                     <button
-                      key={service}
+                      key={service.name}
                       type="button"
                       onClick={() => {
-                        setSelectedService(service);
+                        setSelectedService(service.name);
                         setErrors((current) => ({
                           ...current,
                           service: undefined,
@@ -294,13 +343,14 @@ export default function ContactForm() {
                         setIsValidated(false);
                       }}
                       className={[
-                        "rounded-full border px-4 py-2 text-xs font-medium transition-all duration-300",
+                        "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-medium transition-all duration-300",
                         isSelected
                           ? "border-[#F65011] bg-[#F65011] text-white shadow-[0_8px_20px_rgba(246,80,17,0.15)]"
                           : "border-[#D0D5DD] bg-white text-[#667085] hover:-translate-y-0.5 hover:border-[#F65011]/40 hover:bg-[#FFF8F5] hover:text-[#F65011] hover:shadow-[0_6px_16px_rgba(246,80,17,0.08)]",
                       ].join(" ")}
                     >
-                      {service}
+                      <service.icon size={14} strokeWidth={1.8} />
+                      {service.name}
                     </button>
                   );
                 })}

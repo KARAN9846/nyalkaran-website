@@ -1,34 +1,48 @@
+import {
+  ArrowUpRight,
+  BarChart3,
+  FileText,
+  MousePointerClick,
+  Search,
+  Share2,
+  type LucideIcon,
+} from "lucide-react";
+
 export default function DigitalMarketing() {
-  const capabilities = [
+  const capabilities: {
+    title: string;
+    description: string;
+    icon: LucideIcon;
+  }[] = [
     {
-      number: "01",
       title: "SEO",
       description:
         "Improve organic visibility and help the right people discover your business.",
+      icon: Search,
     },
     {
-      number: "02",
       title: "Social Media",
       description:
         "Build presence, engagement and meaningful conversations around your brand.",
+      icon: Share2,
     },
     {
-      number: "03",
       title: "Performance Marketing",
       description:
         "Turn targeted reach into measurable traffic, enquiries and opportunities.",
+      icon: MousePointerClick,
     },
     {
-      number: "04",
       title: "Content Marketing",
       description:
         "Create useful content that builds trust and supports the customer journey.",
+      icon: FileText,
     },
     {
-      number: "05",
       title: "Analytics",
       description:
         "Use data and insights to understand what works and where growth can improve.",
+      icon: BarChart3,
     },
   ];
 
@@ -97,42 +111,43 @@ export default function DigitalMarketing() {
               </span>
             </div>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-[-0.045em] text-[#101828] sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-[-0.045em] text-[#101828] sm:text-4xl lg:text-5xl max-[399px]:mt-3 max-[399px]:text-[2rem] max-[399px]:leading-[1.08] max-[399px]:tracking-[-0.04em]">
               Turn digital attention into{" "}
               <span className="text-[#F65011]">measurable growth.</span>
             </h2>
           </div>
 
-          <p className="max-w-xl text-sm leading-6 text-[#667085] sm:text-base sm:leading-7">
+          <p className="max-w-xl text-sm leading-6 text-[#667085] sm:text-base sm:leading-7 max-[399px]:max-w-full max-[399px]:text-[13px] max-[399px]:leading-6">
             We combine visibility, content, performance and analytics to help
             businesses reach the right audience and turn attention into action.
           </p>
         </div>
 
         {/* Main dashboard */}
-        <div className="group relative mt-8 overflow-hidden rounded-[1.75rem] border border-[#E4E7EC] bg-[#101828] shadow-[0_22px_60px_rgba(16,24,40,0.10)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#F65011]/20 hover:shadow-[0_28px_70px_rgba(16,24,40,0.14)] sm:mt-10">
+        {/* Main dashboard */}
+        <div className="group relative mt-8 overflow-hidden rounded-[1.75rem] border border-[#E4E7EC] bg-[#101828] shadow-[0_22px_60px_rgba(16,24,40,0.10)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#F65011]/20 hover:shadow-[0_28px_70px_rgba(16,24,40,0.14)] sm:mt-10 max-[399px]:mt-6 max-[399px]:rounded-[1.5rem]">
           <div className="grid lg:grid-cols-[1.2fr_0.8fr]">
             {/* Growth overview */}
-            <div className="relative p-5 sm:p-7 lg:p-8">
-              <div className="flex items-start justify-between gap-5">
+            <div className="relative p-5 sm:p-7 lg:p-8 max-[399px]:p-4">
+              <div className="flex items-start justify-between gap-5 max-[399px]:flex-col max-[399px]:gap-3">
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#667085]">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#667085] max-[399px]:text-[9px]">
                     Growth overview
                   </p>
 
-                  <div className="mt-2 flex items-end gap-3">
-                    <span className="text-3xl font-bold tracking-[-0.04em] text-white sm:text-4xl">
+                  <div className="mt-2 flex items-end gap-3 max-[399px]:gap-2">
+                    <span className="text-3xl font-bold tracking-[-0.04em] text-white sm:text-4xl max-[399px]:text-[2rem]">
                       +47.8%
                     </span>
 
-                    <span className="mb-1 text-xs font-semibold text-[#F65011]">
+                    <span className="mb-1 text-xs font-semibold text-[#F65011] max-[399px]:text-[10px]">
                       ↗ positive movement
                     </span>
                   </div>
                 </div>
 
                 <div
-                  className="digital-growth-motion shrink-0 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2"
+                  className="digital-growth-motion shrink-0 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 max-[399px]:self-start max-[399px]:px-3 max-[399px]:py-1.5"
                   style={{
                     animation: "growthFloat 4s ease-in-out infinite",
                   }}
@@ -141,14 +156,14 @@ export default function DigitalMarketing() {
                     Growth
                   </p>
 
-                  <p className="mt-0.5 text-[11px] font-medium text-white">
+                  <p className="mt-0.5 text-[11px] font-medium text-white max-[399px]:text-[10px]">
                     Moving forward
                   </p>
                 </div>
               </div>
 
               {/* Chart */}
-              <div className="relative mt-6 h-[200px] overflow-hidden rounded-2xl border border-white/10 bg-[#08111E] p-3 sm:h-[220px] sm:p-4">
+              <div className="relative mt-6 h-[200px] overflow-hidden rounded-2xl border border-white/10 bg-[#08111E] p-3 sm:h-[220px] sm:p-4 max-[399px]:mt-4 max-[399px]:h-[180px] max-[399px]:rounded-xl max-[399px]:p-2.5">
                 <div
                   aria-hidden="true"
                   className="absolute inset-x-4 top-1/4 h-px bg-white/5"
@@ -389,41 +404,58 @@ export default function DigitalMarketing() {
         </div>
 
         {/* Compact capability strip */}
+        {/* Compact capability strip */}
         <div className="mt-5 overflow-hidden rounded-2xl border border-[#E4E7EC] bg-white shadow-[0_12px_30px_rgba(16,24,40,0.04)]">
           <ol className="grid sm:grid-cols-2 lg:grid-cols-5">
-            {capabilities.map((capability, index) => (
-              <li
-                key={capability.number}
-                className={[
-                  "group relative overflow-hidden border-[#E4E7EC] px-4 py-4 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-[#F8FAFC] hover:shadow-[0_12px_28px_rgba(16,24,40,0.07)]",
-                  index < capabilities.length - 1
-                    ? "border-b sm:nth-[odd]:border-r lg:border-b-0 lg:border-r"
-                    : "",
-                  index === 4 ? "sm:border-b-0" : "",
-                ].join(" ")}
-              >
-                <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#F65011]/0 blur-2xl transition-all duration-700 group-hover:bg-[#F65011]/10" />
+            {capabilities.map((capability, index) => {
+              const Icon = capability.icon;
 
-                <div className="relative flex items-center justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="text-[10px] font-bold text-[#F65011] transition-transform duration-500 ease-out group-hover:translate-x-0.5">
-                      {capability.number}
-                    </p>
+              return (
+                <li
+                  key={capability.title}
+                  className={[
+                    "group relative overflow-hidden border-[#E4E7EC] px-4 py-4 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-[#F8FAFC] hover:shadow-[0_12px_28px_rgba(16,24,40,0.07)]",
+                    index < capabilities.length - 1
+                      ? "border-b sm:nth-[odd]:border-r lg:border-b-0 lg:border-r"
+                      : "",
+                    index === 4 ? "sm:border-b-0" : "",
+                  ].join(" ")}
+                >
+                  {/* Soft Glow */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#F65011]/0 blur-2xl transition-all duration-700 group-hover:bg-[#F65011]/10"
+                  />
 
-                    <h4 className="mt-1 truncate text-sm font-semibold text-[#101828] transition-all duration-500 ease-out group-hover:translate-x-1 group-hover:text-[#F65011]">
-                      {capability.title}
-                    </h4>
+                  <div className="relative flex items-center justify-between gap-3">
+                    {/* Icon + Title */}
+                    <div className="flex min-w-0 items-center gap-3">
+                      <span
+                        aria-hidden="true"
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F65011] text-white shadow-[0_7px_16px_rgba(246,80,17,0.15)] transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_9px_20px_rgba(246,80,17,0.22)]"
+                      >
+                        <Icon size={19} strokeWidth={1.9} />
+                      </span>
+
+                      <h4 className="min-w-0 truncate text-sm font-semibold text-[#101828] transition-all duration-500 ease-out group-hover:translate-x-1 group-hover:text-[#F65011]">
+                        {capability.title}
+                      </h4>
+                    </div>
+
+                    {/* Arrow */}
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#E4E7EC] text-[#98A2B3] transition-all duration-500 ease-out group-hover:translate-x-1 group-hover:border-[#F65011] group-hover:bg-[#F65011] group-hover:text-white">
+                      <ArrowUpRight
+                        size={15}
+                        strokeWidth={1.8}
+                        className="transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      />
+                    </span>
                   </div>
-
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-transparent text-xs text-[#98A2B3] transition-all duration-500 ease-out group-hover:translate-x-1 group-hover:border-[#F65011]/20 group-hover:bg-[#F65011]/10 group-hover:text-[#F65011]">
-                    ↗
-                  </span>
-                </div>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ol>
         </div>
-
         {/* Closing statement */}
         <div className="mt-5 flex flex-col gap-2 border-t border-[#E4E7EC] pt-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs leading-5 text-[#667085] sm:text-sm">

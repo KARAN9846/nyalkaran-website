@@ -75,7 +75,22 @@ export function Navbar() {
           {/* Desktop CTA */}
           <Link
             href="/contact"
-            className="hidden items-center rounded-xl bg-[#F65011] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] md:inline-flex"
+            className="
+              hidden
+              items-center
+              rounded-xl
+              bg-[#F65011]
+              px-5
+              py-3
+              text-sm
+              font-semibold
+              !text-white
+              transition-all
+              duration-300
+              hover:-translate-y-0.5
+              hover:bg-[#D9430B]
+              md:inline-flex
+            "
           >
             Let's Talk
           </Link>
@@ -111,10 +126,22 @@ export function Navbar() {
                 </Link>
               ))}
 
+              {/* Mobile CTA */}
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 rounded-xl bg-[#F65011] px-4 py-3 text-center text-sm font-semibold text-white"
+                className="
+                  mt-2
+                  rounded-xl
+                  bg-[#F65011]
+                  px-4
+                  py-3
+                  text-center
+                  text-sm
+                  font-semibold
+                  !text-white
+                  hover:bg-[#D9430B]
+                "
               >
                 Let's Talk
               </Link>

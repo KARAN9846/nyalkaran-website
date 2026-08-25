@@ -1,3 +1,13 @@
+"use client";
+
+import {
+  BriefcaseBusiness,
+  Compass,
+  Handshake,
+  RefreshCw,
+  ShieldCheck,
+} from "lucide-react";
+
 export default function WhyNyalkaran() {
   return (
     <section className="border-t border-[#E4E7EC] bg-white">
@@ -13,36 +23,36 @@ export default function WhyNyalkaran() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-[#667085] sm:text-lg sm:leading-8">
-            We don&apos;t just build digital products. We understand your
-            goals, solve real business problems and create technology that
-            grows with your business.
+            We don&apos;t just build digital products. We understand your goals,
+            solve real business problems and create technology that grows with
+            your business.
           </p>
         </div>
 
         {/* Main Content */}
         <div className="mt-14 grid gap-5 lg:mt-16 lg:grid-cols-12">
-          {/* Large Feature */}
-          <div className="rounded-3xl bg-[#101828] p-7 text-white sm:p-9 lg:col-span-5 lg:p-10">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F65011] text-sm font-bold text-white">
-              01
+          {/* Card 1 — Business-first thinking */}
+          <div className="rounded-3xl bg-[#101828] p-7 text-white transition-colors duration-300 max-sm:bg-[#F8FAFC] max-sm:text-[#101828] sm:p-9 lg:col-span-5 lg:p-10">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F65011] text-white">
+              <BriefcaseBusiness aria-hidden="true" size={20} strokeWidth={2} />
             </div>
 
             <h3 className="mt-8 text-2xl font-bold tracking-[-0.02em] sm:text-3xl">
               Business-first thinking
             </h3>
 
-            <p className="mt-4 text-sm leading-7 text-[#98A2B3] sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#98A2B3] max-sm:text-[#667085] sm:text-base">
               Before choosing technology, we understand what your business is
-              trying to achieve. Every solution starts with the problem it
-              needs to solve.
+              trying to achieve. Every solution starts with the problem it needs
+              to solve.
             </p>
 
-            <div className="mt-10 border-t border-white/10 pt-5">
+            <div className="mt-10 border-t border-white/10 pt-5 max-sm:border-[#E4E7EC]">
               <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#98A2B3]">
                 From requirement
               </p>
 
-              <p className="mt-2 text-base font-semibold text-white">
+              <p className="mt-2 text-base font-semibold text-white max-sm:text-[#101828]">
                 → to practical solution
               </p>
             </div>
@@ -50,16 +60,19 @@ export default function WhyNyalkaran() {
 
           {/* Right Grid */}
           <div className="grid gap-5 sm:grid-cols-2 lg:col-span-7">
-            {/* Card 2 */}
+            {/* Card 2 — Strategy */}
             <div
               tabIndex={0}
-              className="group relative overflow-hidden rounded-3xl border border-[#E4E7EC] bg-[#F8FAFC] p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/30 hover:bg-white hover:shadow-[0_18px_40px_rgba(16,24,40,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:-translate-y-0.5 active:border-[#F65011]/30 active:bg-white active:shadow-[0_12px_30px_rgba(16,24,40,0.08)] sm:p-8"
+              className="group relative overflow-hidden rounded-3xl border border-[#E4E7EC] bg-[#F8FAFC] p-7 text-[#101828] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/30 hover:bg-white hover:shadow-[0_18px_40px_rgba(16,24,40,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:-translate-y-0.5 active:border-[#F65011]/30 active:bg-white active:shadow-[0_12px_30px_rgba(16,24,40,0.08)] max-sm:border-[#101828] max-sm:bg-[#101828] max-sm:text-white sm:p-8"
             >
               <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#F65011]/0 blur-2xl transition-all duration-500 group-hover:bg-[#F65011]/10 group-focus-visible:bg-[#F65011]/10 group-active:bg-[#F65011]/10" />
 
               <div className="flex items-center justify-between">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-[#F65011] transition-all duration-300 group-hover:bg-[#F65011] group-hover:text-white group-focus-visible:bg-[#F65011] group-focus-visible:text-white group-active:bg-[#F65011] group-active:text-white">
-                  02
+                <span
+                  aria-hidden="true"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F65011] text-white shadow-[0_8px_18px_rgba(246,80,17,0.16)]"
+                >
+                  <Compass size={18} strokeWidth={2} />
                 </span>
 
                 <span className="text-sm font-medium text-[#98A2B3] transition-colors duration-300 group-hover:text-[#F65011] group-focus-visible:text-[#F65011] group-active:text-[#F65011]">
@@ -67,17 +80,17 @@ export default function WhyNyalkaran() {
                 </span>
               </div>
 
-              <h3 className="mt-8 text-xl font-bold text-[#101828] transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1 group-active:translate-x-1">
+              <h3 className="mt-8 text-xl font-bold text-[#101828] transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1 group-active:translate-x-1 max-sm:text-white">
                 Clear direction
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[#667085]">
+              <p className="mt-3 text-sm leading-6 text-[#667085] max-sm:text-[#98A2B3]">
                 We turn ideas and business requirements into a clear technical
                 direction before development begins.
               </p>
             </div>
 
-            {/* Card 3 */}
+            {/* Card 3 — Quality */}
             <div
               tabIndex={0}
               className="group relative overflow-hidden rounded-3xl border border-[#E4E7EC] bg-[#F8FAFC] p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/30 hover:bg-white hover:shadow-[0_18px_40px_rgba(16,24,40,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:-translate-y-0.5 active:border-[#F65011]/30 active:bg-white active:shadow-[0_12px_30px_rgba(16,24,40,0.08)] sm:p-8"
@@ -85,8 +98,11 @@ export default function WhyNyalkaran() {
               <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#F65011]/0 blur-2xl transition-all duration-500 group-hover:bg-[#F65011]/10 group-focus-visible:bg-[#F65011]/10 group-active:bg-[#F65011]/10" />
 
               <div className="flex items-center justify-between">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-[#F65011] transition-all duration-300 group-hover:bg-[#F65011] group-hover:text-white group-focus-visible:bg-[#F65011] group-focus-visible:text-white group-active:bg-[#F65011] group-active:text-white">
-                  03
+                <span
+                  aria-hidden="true"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F65011] text-white shadow-[0_8px_18px_rgba(246,80,17,0.16)]"
+                >
+                  <ShieldCheck size={18} strokeWidth={2} />
                 </span>
 
                 <span className="text-sm font-medium text-[#98A2B3] transition-colors duration-300 group-hover:text-[#F65011] group-focus-visible:text-[#F65011] group-active:text-[#F65011]">
@@ -104,16 +120,19 @@ export default function WhyNyalkaran() {
               </p>
             </div>
 
-            {/* Card 4 */}
+            {/* Card 4 — Flexibility */}
             <div
               tabIndex={0}
-              className="group relative overflow-hidden rounded-3xl border border-[#E4E7EC] bg-[#F8FAFC] p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/30 hover:bg-white hover:shadow-[0_18px_40px_rgba(16,24,40,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:-translate-y-0.5 active:border-[#F65011]/30 active:bg-white active:shadow-[0_12px_30px_rgba(16,24,40,0.08)] sm:p-8"
+              className="group relative overflow-hidden rounded-3xl border border-[#E4E7EC] bg-[#F8FAFC] p-7 text-[#101828] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/30 hover:bg-white hover:shadow-[0_18px_40px_rgba(16,24,40,0.08)] focus-visible:outline-none focus-visible:ring-2px focus-visible:ring-[#F65011]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:-translate-y-0.5 active:border-[#F65011]/30 active:bg-white active:shadow-[0_12px_30px_rgba(16,24,40,0.08)] max-sm:border-[#101828] max-sm:bg-[#101828] max-sm:text-white sm:p-8"
             >
               <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#F65011]/0 blur-2xl transition-all duration-500 group-hover:bg-[#F65011]/10 group-focus-visible:bg-[#F65011]/10 group-active:bg-[#F65011]/10" />
 
               <div className="flex items-center justify-between">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-[#F65011] transition-all duration-300 group-hover:bg-[#F65011] group-hover:text-white group-focus-visible:bg-[#F65011] group-focus-visible:text-white group-active:bg-[#F65011] group-active:text-white">
-                  04
+                <span
+                  aria-hidden="true"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F65011] text-white shadow-[0_8px_18px_rgba(246,80,17,0.16)]"
+                >
+                  <RefreshCw size={18} strokeWidth={2} />
                 </span>
 
                 <span className="text-sm font-medium text-[#98A2B3] transition-colors duration-300 group-hover:text-[#F65011] group-focus-visible:text-[#F65011] group-active:text-[#F65011]">
@@ -121,17 +140,17 @@ export default function WhyNyalkaran() {
                 </span>
               </div>
 
-              <h3 className="mt-8 text-xl font-bold text-[#101828] transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1 group-active:translate-x-1">
+              <h3 className="mt-8 text-xl font-bold text-[#101828] transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1 group-active:translate-x-1 max-sm:text-white">
                 Ready to evolve
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[#667085]">
+              <p className="mt-3 text-sm leading-6 text-[#667085] max-sm:text-[#98A2B3]">
                 Your business will change. We build solutions that can adapt,
                 expand and support your next stage of growth.
               </p>
             </div>
 
-            {/* Card 5 */}
+            {/* Card 5 — Partnership */}
             <div
               tabIndex={0}
               className="group relative overflow-hidden rounded-3xl border border-[#E4E7EC] bg-[#F8FAFC] p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/30 hover:bg-white hover:shadow-[0_18px_40px_rgba(16,24,40,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:-translate-y-0.5 active:border-[#F65011]/30 active:bg-white active:shadow-[0_12px_30px_rgba(16,24,40,0.08)] sm:p-8"
@@ -139,8 +158,11 @@ export default function WhyNyalkaran() {
               <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#F65011]/0 blur-2xl transition-all duration-500 group-hover:bg-[#F65011]/10 group-focus-visible:bg-[#F65011]/10 group-active:bg-[#F65011]/10" />
 
               <div className="flex items-center justify-between">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-[#F65011] transition-all duration-300 group-hover:bg-[#F65011] group-hover:text-white group-focus-visible:bg-[#F65011] group-focus-visible:text-white group-active:bg-[#F65011] group-active:text-white">
-                  05
+                <span
+                  aria-hidden="true"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F65011] text-white shadow-[0_8px_18px_rgba(246,80,17,0.16)]"
+                >
+                  <Handshake size={18} strokeWidth={2} />
                 </span>
 
                 <span className="text-sm font-medium text-[#98A2B3] transition-colors duration-300 group-hover:text-[#F65011] group-focus-visible:text-[#F65011] group-active:text-[#F65011]">

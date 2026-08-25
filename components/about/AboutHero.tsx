@@ -26,8 +26,8 @@ export default function AboutHero() {
 
             <p className="mt-7 max-w-2xl text-base leading-7 text-[#667085] sm:text-lg sm:leading-8">
               Nyalkaran Technosoft LLP helps businesses turn ideas, challenges
-              and growth opportunities into practical digital solutions.
-              From software and websites to mobile applications and digital
+              and growth opportunities into practical digital solutions. From
+              software and websites to mobile applications and digital
               marketing, we bring technology, design and business thinking
               together to move ideas forward.
             </p>
@@ -35,14 +35,13 @@ export default function AboutHero() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
                 href="/contact"
-                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#F65011] px-6 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] hover:shadow-[0_12px_30px_rgba(246,80,17,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8FAFC]"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#F65011] px-6 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] hover:shadow-[0_12px_30px_rgba(246,80,17,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011] focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
               >
                 Start Your Project
                 <span aria-hidden="true" className="ml-2">
                   →
                 </span>
               </a>
-
               <a
                 href="/services"
                 className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#D0D5DD] bg-white px-6 text-sm font-semibold text-[#101828] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F65011]/40 hover:text-[#F65011] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8FAFC]"
@@ -74,8 +73,7 @@ export default function AboutHero() {
                 </p>
 
                 <h2 className="mt-3 text-3xl font-bold tracking-[-0.04em] text-[#101828] sm:text-4xl">
-                  understanding the{" "}
-                  <span className="text-[#F65011]">why.</span>
+                  understanding the <span className="text-[#F65011]">why.</span>
                 </h2>
               </div>
 

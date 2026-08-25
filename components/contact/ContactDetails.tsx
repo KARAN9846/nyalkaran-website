@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export default function ContactDetails() {
   const whatsappNumber = "919904425105";
@@ -43,17 +44,38 @@ export default function ContactDetails() {
             </p>
 
             {/* Business Hours */}
-            <div className="mt-8 rounded-2xl border border-[#E4E7EC] bg-white p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#98A2B3]">
+            <div
+              className="
+    mt-8 rounded-2xl border border-[#E4E7EC] bg-white p-5
+    max-sm:border-[#101828]
+    max-sm:bg-[#101828]
+  "
+            >
+              <p
+                className="
+      text-xs font-semibold uppercase tracking-[0.14em]  text-[#101828]
+        max-sm:text-white
+    "
+              >
                 Business hours
               </p>
 
               <div className="mt-3 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-                <span className="text-sm font-semibold text-[#101828]">
+                <span
+                  className="
+        text-sm font-semibold  text-[#98A2B3]
+      max-sm:text-[#F65011]
+      "
+                >
                   Monday – Saturday
                 </span>
 
-                <span className="text-sm text-[#667085]">
+                <span
+                  className="
+        text-sm text-[#667085]
+        max-sm:text-[#F65011]
+      "
+                >
                   10:00 AM – 7:00 PM
                 </span>
               </div>
@@ -76,9 +98,9 @@ export default function ContactDetails() {
             >
               <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-start gap-4">
-                  {/* Number */}
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FFF3EE] text-xs font-bold text-[#F65011] transition-all duration-300 group-hover:bg-[#F65011] group-hover:text-white">
-                    01
+                  {/* WhatsApp Icon */}
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FFF3EE] text-[#F65011] transition-all duration-300 group-hover:bg-[#F65011] group-hover:text-white">
+                    <SiWhatsapp aria-hidden="true" size={20} />
                   </span>
 
                   <div>
@@ -237,7 +259,7 @@ export default function ContactDetails() {
 
               <Link
                 href="/contact"
-                className="inline-flex min-h-10 items-center justify-center self-start rounded-xl bg-[#F65011] px-5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] hover:shadow-[0_10px_25px_rgba(246,80,17,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011] focus-visible:ring-offset-2"
+                className="inline-flex min-h-10 items-center justify-center self-start rounded-xl bg-[#F65011] px-5 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] hover:shadow-[0_10px_25px_rgba(246,80,17,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011] focus-visible:ring-offset-2"
               >
                 Let&apos;s Talk
                 <span aria-hidden="true" className="ml-2">

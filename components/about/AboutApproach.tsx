@@ -107,54 +107,68 @@ export default function AboutApproach() {
 
         {/* Capabilities */}
         <ol className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-          {capabilities.map((capability) => {
+          {capabilities.map((capability, index) => {
             const Icon = capability.icon;
+            const isLightCard = index % 2 === 0;
 
             return (
               <li
                 key={capability.number}
-                className="group flex h-full flex-col rounded-3xl border border-[#E4E7EC] bg-[#F8FAFC] p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/25 hover:bg-white hover:shadow-[0_18px_40px_rgba(16,24,40,0.07)] sm:p-7"
+                className={`group flex h-full flex-col rounded-3xl border border-[#E4E7EC] bg-[#F8FAFC] p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/25 hover:bg-white hover:shadow-[0_18px_40px_rgba(16,24,40,0.07)] sm:p-7 ${
+                  isLightCard
+                    ? "max-sm:border-[#E4E7EC] max-sm:bg-[#F8FAFC]"
+                    : "max-sm:border-[#101828] max-sm:bg-[#101828]"
+                }`}
               >
-                {/* Top Row: Number / Icon / Arrow */}
-                <div className="grid grid-cols-3 items-center">
-                  {/* Number */}
-                  <div className="justify-self-start">
-                    <span className="text-sm font-bold text-[#F65011]">
-                      {capability.number}
-                    </span>
-                  </div>
-
+                {/* Top Row: Icon / Arrow */}
+                <div className="flex items-start justify-between gap-4">
                   {/* Service Icon */}
-                  <div className="justify-self-center">
-                    <span
-                      aria-hidden="true"
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E4E7EC] bg-white text-[#667085] transition-all duration-300 group-hover:border-[#F65011]/25 group-hover:bg-[#F65011]/5 group-hover:text-[#F65011]"
-                    >
-                      <Icon size={17} strokeWidth={1.8} />
-                    </span>
-                  </div>
+                  <span
+                    aria-hidden="true"
+                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F65011] text-white shadow-[0_10px_24px_rgba(246,80,17,0.18)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_12px_28px_rgba(246,80,17,0.25)]"
+                  >
+                    <Icon size={25} strokeWidth={2} />
+                  </span>
 
-                  {/* Arrow */}
-                  <div className="justify-self-end">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E4E7EC] text-[#667085] transition-all duration-300 group-hover:border-[#F65011] group-hover:bg-[#F65011] group-hover:text-white">
-                      <ArrowUpRight size={15} strokeWidth={1.8} />
-                    </span>
-                  </div>
+                  {/* Larger Arrow */}
+                  <span
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border bg-white text-[#667085] transition-all duration-300 group-hover:border-[#F65011] group-hover:bg-[#F65011] group-hover:text-white ${
+                      isLightCard
+                        ? "border-[#E4E7EC]"
+                        : "border-[#E4E7EC] max-sm:border-white/10"
+                    }`}
+                  >
+                    <ArrowUpRight size={20} strokeWidth={1.9} />
+                  </span>
                 </div>
 
                 {/* Title */}
-                <h4 className="mt-8 text-xl font-bold tracking-[-0.02em] text-[#101828] transition-transform duration-300 group-hover:translate-x-1">
+                <h4
+                  className={`mt-8 text-xl font-bold tracking-[-0.02em] transition-transform duration-300 group-hover:translate-x-1 ${
+                    isLightCard ? "text-[#101828]" : "max-sm:text-white"
+                  }`}
+                >
                   {capability.title}
                 </h4>
 
                 {/* Description */}
-                <p className="mt-3 min-h-[120px] text-sm leading-6 text-[#667085] sm:min-h-[120px]">
+                <p
+                  className={`mt-3 min-h-[120px] text-sm leading-6 sm:min-h-[120px] ${
+                    isLightCard ? "text-[#667085]" : "max-sm:text-[#98A2B3]"
+                  }`}
+                >
                   {capability.description}
                 </p>
 
                 {/* Bottom Accent */}
                 <div aria-hidden="true" className="mt-auto pt-6">
-                  <div className="h-px w-full overflow-hidden bg-[#E4E7EC]">
+                  <div
+                    className={`h-px w-full overflow-hidden ${
+                      isLightCard
+                        ? "bg-[#E4E7EC]"
+                        : "bg-[#E4E7EC] max-sm:bg-white/10"
+                    }`}
+                  >
                     <div className="h-full w-0 bg-[#F65011] transition-all duration-500 ease-out group-hover:w-full" />
                   </div>
                 </div>

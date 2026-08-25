@@ -84,14 +84,10 @@ export default function ServicesHero() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="/contact"
-                className="group inline-flex min-h-12 items-center justify-center rounded-xl bg-[#F65011] px-6 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] hover:shadow-[0_12px_30px_rgba(246,80,17,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8FAFC]"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#F65011] px-6 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] hover:shadow-[0_12px_30px_rgba(246,80,17,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011] focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
               >
                 Start Your Project
-
-                <span
-                  aria-hidden="true"
-                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                >
+                <span aria-hidden="true" className="ml-2">
                   →
                 </span>
               </a>
@@ -101,7 +97,6 @@ export default function ServicesHero() {
                 className="group inline-flex min-h-12 items-center justify-center rounded-xl border border-[#D0D5DD] bg-white px-6 text-sm font-semibold text-[#101828] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F65011]/40 hover:text-[#F65011] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8FAFC]"
               >
                 Explore Services
-
                 <span
                   aria-hidden="true"
                   className="ml-2 transition-transform duration-300 group-hover:translate-y-0.5"
@@ -122,18 +117,14 @@ export default function ServicesHero() {
                 className="h-1 w-1 rounded-full bg-[#F65011]"
               />
 
-              <span className="text-xs font-medium text-[#667085]">
-                Web
-              </span>
+              <span className="text-xs font-medium text-[#667085]">Web</span>
 
               <span
                 aria-hidden="true"
                 className="h-1 w-1 rounded-full bg-[#F65011]"
               />
 
-              <span className="text-xs font-medium text-[#667085]">
-                Mobile
-              </span>
+              <span className="text-xs font-medium text-[#667085]">Mobile</span>
 
               <span
                 aria-hidden="true"
@@ -148,26 +139,26 @@ export default function ServicesHero() {
 
           {/* Right visual */}
           <div className="relative lg:justify-self-end lg:w-full lg:max-w-xl">
-            <div className="group relative overflow-hidden rounded-[2rem] border border-[#E4E7EC] bg-white p-5 shadow-[0_24px_70px_rgba(16,24,40,0.07)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/20 hover:shadow-[0_30px_80px_rgba(16,24,40,0.1)] sm:p-7">
+            <div className="group relative overflow-hidden rounded-[2rem] border border-[#E4E7EC] bg-white p-5 shadow-[0_24px_70px_rgba(16,24,40,0.07)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F65011]/20 hover:shadow-[0_30px_80px_rgba(16,24,40,0.1)] max-sm:border-[#101828] max-sm:bg-[#101828] max-sm:shadow-[0_20px_50px_rgba(16,24,40,0.18)] sm:p-7">
               {/* Decorative glow */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#F65011]/0 blur-3xl transition-all duration-500 group-hover:bg-[#F65011]/10"
+                className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#F65011]/0 blur-3xl transition-all duration-500 group-hover:bg-[#F65011]/10 max-sm:bg-[#F65011]/8"
               />
 
               {/* Header */}
-              <div className="relative flex items-center justify-between">
+              <div className="relative flex items-center justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#98A2B3]">
                     What We Enable
                   </p>
 
-                  <p className="mt-1 text-sm font-medium text-[#344054]">
+                  <p className="mt-1 text-sm font-medium text-[#344054] max-sm:text-white">
                     Technology with purpose
                   </p>
                 </div>
 
-                <div className="flex items-center gap-2 rounded-full border border-[#E4E7EC] bg-[#F8FAFC] px-3 py-1.5">
+                <div className="flex shrink-0 items-center gap-2 rounded-full border border-[#E4E7EC] bg-[#F8FAFC] px-3 py-1.5 max-sm:border-white/10 max-sm:bg-white">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#F65011]" />
 
                   <span className="text-[11px] font-medium text-[#667085]">
@@ -182,7 +173,7 @@ export default function ServicesHero() {
                   One partner. Multiple ways to move forward.
                 </p>
 
-                <h2 className="mt-3 text-3xl font-bold tracking-[-0.045em] text-[#101828] sm:text-4xl">
+                <h2 className="mt-3 text-3xl font-bold tracking-[-0.045em] text-[#101828] max-sm:text-white sm:text-4xl">
                   Build.
                   <br />
                   <span className="text-[#F65011]">Automate.</span>
@@ -192,30 +183,33 @@ export default function ServicesHero() {
               </div>
 
               {/* Capability list */}
-              <ol className="relative mt-8 space-y-2.5">
+              <ol className="relative mt-8 space-y-2.5 max-sm:mt-7 max-sm:space-y-3">
                 {capabilities.map((capability) => (
                   <li
                     key={capability.number}
-                    className="group/item rounded-2xl border border-[#E4E7EC] bg-[#F8FAFC] p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F65011]/25 hover:bg-white"
+                    className="group/item rounded-2xl border border-[#E4E7EC] bg-[#F8FAFC] p-3.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F65011]/25 hover:bg-white max-sm:border-white/10 max-sm:border-l-2 max-sm:border-l-[#F65011] max-sm:bg-[#182235] max-sm:p-4 max-sm:shadow-[0_8px_25px_rgba(0,0,0,0.18)]"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-[11px] font-bold text-[#F65011] transition-all duration-300 group-hover/item:bg-[#F65011] group-hover/item:text-white">
+                      {/* Number */}
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-[11px] font-bold text-[#F65011] transition-all duration-300 group-hover/item:bg-[#F65011] group-hover/item:text-white max-sm:bg-[#F65011]/10 max-sm:text-[#F65011] max-sm:ring-1 max-sm:ring-[#F65011]/20">
                         {capability.number}
                       </span>
 
+                      {/* Content */}
                       <div className="min-w-0 flex-1">
-                        <p className="text-sm font-semibold text-[#101828]">
+                        <p className="text-sm font-semibold text-[#101828] max-sm:text-white">
                           {capability.title}
                         </p>
 
-                        <p className="mt-0.5 text-xs leading-5 text-[#98A2B3]">
+                        <p className="mt-1 text-xs leading-5 text-[#98A2B3]">
                           {capability.description}
                         </p>
                       </div>
 
+                      {/* Arrow */}
                       <span
                         aria-hidden="true"
-                        className="shrink-0 text-sm text-[#98A2B3] transition-all duration-300 group-hover/item:translate-x-1 group-hover/item:text-[#F65011]"
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm text-[#98A2B3] transition-all duration-300 group-hover/item:translate-x-1 group-hover/item:text-[#F65011] max-sm:bg-white/5 max-sm:text-[#F65011]"
                       >
                         →
                       </span>
@@ -225,17 +219,14 @@ export default function ServicesHero() {
               </ol>
 
               {/* Bottom statement */}
-              <div className="relative mt-7 flex items-center justify-between border-t border-[#E4E7EC] pt-5">
+              <div className="relative mt-7 flex items-center justify-between border-t border-[#E4E7EC] pt-5 max-sm:mt-8 max-sm:border-white/10 max-sm:pt-5">
                 <p className="text-xs font-medium text-[#98A2B3]">
                   From idea to measurable progress
                 </p>
 
-                <p className="text-sm font-bold text-[#101828]">
+                <p className="text-sm font-bold text-[#101828] max-sm:text-white">
                   Idea
-                  <span
-                    aria-hidden="true"
-                    className="mx-2 text-[#F65011]"
-                  >
+                  <span aria-hidden="true" className="mx-2 text-[#F65011]">
                     →
                   </span>
                   Product

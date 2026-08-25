@@ -36,8 +36,25 @@ export default function ContactHero() {
 
           {/* Quick contact direction */}
           <div className="lg:justify-self-end">
-            <div className="rounded-2xl border border-[#E4E7EC] bg-white p-5 shadow-[0_15px_40px_rgba(16,24,40,0.05)]">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#98A2B3]">
+            <div
+              className="
+                rounded-2xl
+                border border-[#E4E7EC]
+                bg-white
+                p-5
+                shadow-[0_15px_40px_rgba(16,24,40,0.05)]
+
+                max-sm:border-white/10
+                max-sm:bg-[#101828]
+                max-sm:shadow-[0_18px_40px_rgba(16,24,40,0.12)]
+              "
+            >
+              <p
+                className="
+                  text-xs font-semibold uppercase tracking-[0.14em]
+                  text-[#98A2B3]
+                "
+              >
                 We can help with
               </p>
 
@@ -46,7 +63,17 @@ export default function ContactHero() {
                   (item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-[#E4E7EC] bg-[#F8FAFC] px-3 py-1.5 text-xs font-medium text-[#344054]"
+                      className="
+                        rounded-full
+                        border border-[#E4E7EC]
+                        bg-[#F8FAFC]
+                        px-3 py-1.5
+                        text-xs font-medium text-[#344054]
+
+                        max-sm:border-white/10
+                        max-sm:bg-white/[0.04]
+                        max-sm:text-[#F2F4F7]
+                      "
                     >
                       {item}
                     </span>
@@ -54,8 +81,22 @@ export default function ContactHero() {
                 )}
               </div>
 
-              <div className="mt-5 border-t border-[#E4E7EC] pt-4">
-                <p className="text-sm font-semibold text-[#101828]">
+              <div
+                className="
+                  mt-5
+                  border-t border-[#E4E7EC]
+                  pt-4
+
+                  max-sm:border-white/10
+                "
+              >
+                <p
+                  className="
+                    text-sm font-semibold text-[#101828]
+
+                    max-sm:text-white
+                  "
+                >
                   Idea
                   <span aria-hidden="true" className="mx-2 text-[#F65011]">
                     →

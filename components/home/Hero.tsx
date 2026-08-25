@@ -144,35 +144,34 @@ export function Hero() {
               <a
                 href="/contact"
                 className="
-                  group
-                  inline-flex
-                  w-full
-                  max-w-[320px]
-                  items-center
-                  justify-center
-                  gap-2
-                  rounded-xl
-                  bg-[#F65011]
-                  px-5
-                  py-3.5
-                  text-sm
-                  font-bold
-                  text-white
-                  shadow-[0_10px_25px_rgba(246,80,17,0.18)]
-                  transition-colors
-                  duration-300
-                  hover:bg-[#D9430B]
-                  sm:w-auto
-                  sm:max-w-none
-                "
+    group
+    inline-flex
+    w-full
+    max-w-[320px]
+    items-center
+    justify-center
+    gap-2
+    rounded-xl
+    bg-[#F65011]
+    px-5
+    py-3.5
+    text-sm
+    font-bold
+    !text-white
+    shadow-[0_10px_25px_rgba(246,80,17,0.18)]
+    transition-colors
+    duration-300
+    hover:bg-[#D9430B]
+    sm:w-auto
+    sm:max-w-none
+  "
               >
                 Start Your Project
                 <ArrowRight
                   size={17}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
+                  className="text-white transition-transform duration-300 group-hover:translate-x-1"
                 />
               </a>
-
               <a
                 href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project."
                 className="
