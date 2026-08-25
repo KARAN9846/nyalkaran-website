@@ -2,30 +2,72 @@ export default function FinalCTA() {
   return (
     <section className="bg-[#F8FAFC]">
       <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28">
-        <div className="relative overflow-hidden rounded-[2rem] bg-[#101828] px-7 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+        <div
+          className="
+            relative overflow-hidden rounded-[2rem] bg-[#101828]
+            px-7 py-12
+            sm:px-10 sm:py-14
+            lg:px-16 lg:py-16
+
+            max-sm:bg-white
+            max-sm:px-6
+            max-sm:py-10
+            max-sm:shadow-[0_18px_45px_rgba(16,24,40,0.08)]
+          "
+        >
           {/* Decorative elements */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#F65011]/15 blur-3xl"
+            className="
+              pointer-events-none absolute -right-24 -top-24 h-64 w-64
+              rounded-full bg-[#F65011]/15 blur-3xl
+
+              max-sm:bg-[#F65011]/6
+            "
           />
 
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-[#F65011]/10 blur-3xl"
+            className="
+              pointer-events-none absolute -bottom-32 -left-20 h-72 w-72
+              rounded-full bg-[#F65011]/10 blur-3xl
+
+              max-sm:bg-[#F65011]/4
+            "
           />
 
           <div className="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
             {/* Content */}
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#F65011]">
+              <p
+                className="
+                  text-sm font-semibold uppercase tracking-[0.18em]
+                  text-[#F65011]
+                "
+              >
                 Ready to move forward?
               </p>
 
-              <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
+              <h2
+                className="
+                  mt-4 text-3xl font-bold tracking-[-0.04em] text-white
+                  sm:text-4xl
+                  lg:text-5xl
+
+                  max-sm:text-[#101828]
+                "
+              >
                 Your next digital idea starts with a conversation.
               </h2>
 
-              <p className="mt-6 max-w-2xl text-base leading-7 text-[#98A2B3] sm:text-lg sm:leading-8">
+              <p
+                className="
+                  mt-6 max-w-2xl text-base leading-7 text-[#98A2B3]
+                  sm:text-lg sm:leading-8
+
+                  max-sm:text-[#667085]
+                "
+              >
                 Whether you need a website, software, mobile application or
                 digital growth strategy, let&apos;s talk about what you want to
                 build next.
@@ -33,17 +75,50 @@ export default function FinalCTA() {
             </div>
 
             {/* Actions */}
-            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col lg:min-w-[210px]">
+            <div className="flex flex-col gap-3 sm:flex-row lg:min-w-[210px] lg:flex-col">
               <a
                 href="/contact"
-                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#F65011] px-6 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D9430B] hover:shadow-[0_12px_30px_rgba(246,80,17,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011] focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
+                className="
+                  inline-flex min-h-12 items-center justify-center rounded-xl
+                  bg-[#F65011] px-6 text-sm font-semibold !text-white
+                  transition-all duration-300
+                  hover:-translate-y-0.5
+                  hover:bg-[#D9430B]
+                  hover:shadow-[0_12px_30px_rgba(246,80,17,0.25)]
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-[#F65011]
+                  focus-visible:ring-offset-2
+                  focus-visible:ring-offset-[#101828]
+                "
               >
                 Start Your Project
               </a>
 
               <a
-                href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project."
-                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/[0.06] px-6 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F65011]/50 hover:bg-[#F65011]/10 hover:!text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F65011]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
+                href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project"
+                className="
+                  inline-flex min-h-12 items-center justify-center rounded-xl
+                  border border-white/20 bg-white/[0.06]
+                  px-6 text-sm font-semibold !text-white
+                  transition-all duration-300
+                  hover:-translate-y-0.5
+                  hover:border-[#F65011]/50
+                  hover:bg-[#F65011]/10
+                  hover:!text-white
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-[#F65011]/60
+                  focus-visible:ring-offset-2
+                  focus-visible:ring-offset-[#101828]
+
+                  max-sm:border-[#E4E7EC]
+                  max-sm:bg-[#F8FAFC]
+                  max-sm:!text-[#101828]
+                  max-sm:hover:border-[#F65011]/40
+                  max-sm:hover:bg-[#FFF7F3]
+                  max-sm:hover:!text-[#101828]
+                "
               >
                 WhatsApp Us
               </a>
@@ -51,13 +126,27 @@ export default function FinalCTA() {
           </div>
 
           {/* Bottom statement */}
-          <div className="relative mt-10 border-t border-white/10 pt-5 sm:mt-12">
+          <div
+            className="
+              relative mt-10 border-t border-white/10 pt-5
+              sm:mt-12
+
+              max-sm:border-[#E4E7EC]
+              max-sm:pt-5
+            "
+          >
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-xs text-[#667085] sm:text-sm">
                 Software · Web · Mobile · Digital Marketing
               </p>
 
-              <p className="text-sm font-semibold text-white">
+              <p
+                className="
+                  text-sm font-semibold text-white
+
+                  max-sm:text-[#101828]
+                "
+              >
                 Idea{" "}
                 <span className="mx-2 text-[#F65011]" aria-hidden="true">
                   →
