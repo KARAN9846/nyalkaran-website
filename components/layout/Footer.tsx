@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 
 const navigationLinks = [
   { label: "Home", href: "/" },
@@ -47,6 +48,37 @@ export default function Footer() {
               software, mobile applications and digital solutions that help
               businesses move forward.
             </p>
+            <div className="mt-5 flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/company/nyalkaran-technosoft-llp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nyalkaran Technosoft LLP on LinkedIn"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#0A66C2] text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(10,102,194,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A66C2] focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
+              >
+                <FaLinkedinIn size={18} aria-hidden="true" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/ai.coding_bharuch?utm_source=qr&igsi=eXVoaWUwejZoNzlp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nyalkaran Technosoft LLP on Instagram"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#E4405F] text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(228,64,95,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E4405F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
+              >
+                <FaInstagram size={18} aria-hidden="true" />
+              </a>
+
+              <a
+                href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Nyalkaran Technosoft LLP on WhatsApp"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#25D366] text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(37,211,102,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#101828]"
+              >
+                <FaWhatsapp size={19} aria-hidden="true" />
+              </a>
+            </div>
           </div>
 
           {/* ===================================================
