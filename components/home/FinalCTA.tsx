@@ -1,3 +1,5 @@
+import { SiWhatsapp } from "react-icons/si";
+
 export default function FinalCTA() {
   return (
     <section className="bg-[#F8FAFC]">
@@ -96,30 +98,29 @@ export default function FinalCTA() {
               </a>
 
               <a
-                href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project"
+                href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project."
                 className="
-                  inline-flex min-h-12 items-center justify-center rounded-xl
-                  border border-white/20 bg-white/[0.06]
-                  px-6 text-sm font-semibold !text-white
-                  transition-all duration-300
-                  hover:-translate-y-0.5
-                  hover:border-[#F65011]/50
-                  hover:bg-[#F65011]/10
-                  hover:!text-white
-                  focus-visible:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-[#F65011]/60
-                  focus-visible:ring-offset-2
-                  focus-visible:ring-offset-[#101828]
-
-                  max-sm:border-[#E4E7EC]
-                  max-sm:bg-[#F8FAFC]
-                  max-sm:!text-[#101828]
-                  max-sm:hover:border-[#F65011]/40
-                  max-sm:hover:bg-[#FFF7F3]
-                  max-sm:hover:!text-[#101828]
-                "
+    inline-flex min-h-12 items-center justify-center gap-2 rounded-xl
+    border border-[#25D366]
+    bg-[#25D366]
+    px-6 text-sm font-semibold !text-white
+    transition-all duration-300
+    hover:-translate-y-0.5
+    hover:border-[#20BD5A]
+    hover:bg-[#20BD5A]
+    hover:!text-white
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-[#25D366]
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-[#101828]
+  "
               >
+                <SiWhatsapp
+                  size={18}
+                  className="shrink-0 text-white"
+                  aria-hidden="true"
+                />
                 WhatsApp Us
               </a>
             </div>

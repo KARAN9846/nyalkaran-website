@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import { Container } from "@/components/ui/Container";
 
 const processSteps = [
@@ -144,27 +145,27 @@ export function Hero() {
               <a
                 href="/contact"
                 className="
-    group
-    inline-flex
-    w-full
-    max-w-[320px]
-    items-center
-    justify-center
-    gap-2
-    rounded-xl
-    bg-[#F65011]
-    px-5
-    py-3.5
-    text-sm
-    font-bold
-    !text-white
-    shadow-[0_10px_25px_rgba(246,80,17,0.18)]
-    transition-colors
-    duration-300
-    hover:bg-[#D9430B]
-    sm:w-auto
-    sm:max-w-none
-  "
+                  group
+                  inline-flex
+                  w-full
+                  max-w-[320px]
+                  items-center
+                  justify-center
+                  gap-2
+                  rounded-xl
+                  bg-[#F65011]
+                  px-5
+                  py-3.5
+                  text-sm
+                  font-bold
+                  !text-white
+                  shadow-[0_10px_25px_rgba(246,80,17,0.18)]
+                  transition-colors
+                  duration-300
+                  hover:bg-[#D9430B]
+                  sm:w-auto
+                  sm:max-w-none
+                "
               >
                 Start Your Project
                 <ArrowRight
@@ -172,6 +173,7 @@ export function Hero() {
                   className="text-white transition-transform duration-300 group-hover:translate-x-1"
                 />
               </a>
+
               <a
                 href="https://wa.me/919904425105?text=Hello%20Nyalkaran%20Technosoft%2C%20I%20would%20like%20to%20discuss%20a%20project."
                 className="
@@ -183,22 +185,26 @@ export function Hero() {
                   gap-2
                   rounded-xl
                   border
-                  border-[#E4E7EC]
-                  bg-white
+                  border-[#25D366]
+                  bg-[#25D366]
                   px-5
                   py-3.5
                   text-sm
                   font-bold
-                  text-[#101828]
+                  !text-white
                   transition-colors
                   duration-300
-                  hover:border-[#F65011]
-                  hover:text-[#F65011]
+                  hover:border-[#20BD5A]
+                  hover:bg-[#20BD5A]
                   sm:w-auto
                   sm:max-w-none
                 "
               >
-                <MessageCircle size={17} />
+                <SiWhatsapp
+                  size={17}
+                  className="shrink-0 text-white"
+                  aria-hidden="true"
+                />
                 WhatsApp Us
               </a>
             </div>
@@ -249,19 +255,19 @@ export function Hero() {
           <div className="mx-auto w-full max-w-xl">
             <div
               className="
-    h-[500px]
-    overflow-hidden
-    rounded-[28px]
-    border
-    border-[#E4E7EC]
-    bg-white
-    p-4
-    shadow-[0_25px_80px_rgba(16,24,40,0.10)]
-    sm:h-[620px]
-    sm:p-6
-    lg:h-[580px]
-    lg:p-7
-  "
+                h-[500px]
+                overflow-hidden
+                rounded-[28px]
+                border
+                border-[#E4E7EC]
+                bg-white
+                p-4
+                shadow-[0_25px_80px_rgba(16,24,40,0.10)]
+                sm:h-[620px]
+                sm:p-6
+                lg:h-[580px]
+                lg:p-7
+              "
             >
               <div className="relative flex h-full flex-col">
                 {/* Card header */}
