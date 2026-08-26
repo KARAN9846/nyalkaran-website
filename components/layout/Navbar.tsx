@@ -34,10 +34,9 @@ export function Navbar() {
             <Image
               src="/images/nyalkaran-logo.svg"
               alt="Nyalkaran Technosoft LLP"
-              width={160}
-              height={55}
+              width={162}
+              height={40}
               priority
-              className="h-auto w-[160px]"
             />
           </Link>
 
