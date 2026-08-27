@@ -134,14 +134,14 @@ export default function CareersShowcase() {
 
             {/* Domain filters */}
             <div
-              className="flex shrink-0 gap-1.5 overflow-x-auto pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              className="grid grid-cols-2 gap-1.5 sm:flex sm:shrink-0 sm:gap-1.5"
               aria-label="Filter by career domain"
             >
               <button
                 type="button"
                 onClick={() => setActiveDomain("all")}
                 aria-pressed={activeDomain === "all"}
-                className={`whitespace-nowrap rounded-lg px-3.5 py-2.5 text-sm font-medium transition-all duration-200 ${
+                className={`flex min-h-10 items-center justify-center whitespace-nowrap rounded-lg px-3.5 py-2.5 text-sm font-medium transition-all duration-200 sm:min-h-0 ${
                   activeDomain === "all"
                     ? "bg-[#101828] text-white shadow-sm"
                     : "bg-[#F8FAFC] text-[#475467] hover:bg-[#FFF4EF] hover:text-[#F65011]"
@@ -161,7 +161,7 @@ export default function CareersShowcase() {
                     onClick={() => setActiveDomain(domain.id)}
                     aria-label={`Filter ${domain.fullLabel} openings`}
                     aria-pressed={isActive}
-                    className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3.5 py-2.5 text-sm font-medium transition-all duration-200 ${
+                    className={`flex min-h-10 items-center justify-center gap-1.5 whitespace-nowrap rounded-lg px-3.5 py-2.5 text-sm font-medium transition-all duration-200 sm:min-h-0 ${
                       isActive
                         ? "bg-[#F65011] text-white shadow-sm"
                         : "bg-[#F8FAFC] text-[#475467] hover:bg-[#FFF4EF] hover:text-[#F65011]"
