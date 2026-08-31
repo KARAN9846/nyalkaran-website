@@ -8,7 +8,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import { HowWeGrow } from "@/components/home/HowWeWorkGrowth";
 
 export const metadata: Metadata = {
-  title: "Nyalkaran Technosoft LLP | Software, Web & Mobile Development",
+  title: "Nyalkaran Technosoft LLP | Software & Web Solutions",
   description:
     "Nyalkaran Technosoft LLP helps businesses build software, websites, mobile applications and digital solutions for growth.",
   alternates: {
