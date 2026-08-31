@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "About Us | Nyalkaran Technosoft LLP",
   description:
     "Learn about Nyalkaran Technosoft LLP, our approach, values and commitment to building practical technology solutions for businesses.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

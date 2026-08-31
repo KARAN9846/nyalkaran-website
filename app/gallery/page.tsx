@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Gallery | Nyalkaran Technosoft LLP",
   description:
     "Explore the people, culture and work environment behind Nyalkaran Technosoft LLP.",
+  alternates: {
+    canonical: "/gallery",
+  },
 };
 
 export default function GalleryPage() {

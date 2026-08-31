@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Services | Nyalkaran Technosoft LLP",
   description:
     "Explore software development, web development, mobile development and digital marketing services from Nyalkaran Technosoft LLP.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {

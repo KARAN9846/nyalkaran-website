@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Careers | Nyalkaran Technosoft LLP",
   description:
     "Explore career opportunities at Nyalkaran Technosoft LLP across web, mobile, software development and digital marketing.",
+  alternates: {
+    canonical: "/careers",
+  },
 };
 
 export default function CareersPage() {

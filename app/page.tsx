@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Nyalkaran Technosoft LLP | Software, Web & Mobile Development",
   description:
     "Nyalkaran Technosoft LLP helps businesses build software, websites, mobile applications and digital solutions for growth.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function Home() {

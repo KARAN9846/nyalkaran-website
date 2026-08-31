@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Contact Us | Nyalkaran Technosoft LLP",
   description:
     "Get in touch with Nyalkaran Technosoft LLP to discuss software, web, mobile development and digital marketing solutions for your business.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
