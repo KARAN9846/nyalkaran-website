@@ -398,12 +398,12 @@ export default function GalleryShowcase() {
             </span>
           </div>
 
-          <h2
+          <h1
             id="life-at-nyalkaran"
             className="font-[var(--font-manrope)] text-3xl font-bold tracking-tight text-[#101828] sm:text-4xl lg:text-[42px]"
           >
             Life at Nyalkaran
-          </h2>
+          </h1>
 
           <p className="mt-3 max-w-xl text-sm leading-6 text-[#667085] sm:text-base">
             The people, collaboration and everyday moments behind what we
