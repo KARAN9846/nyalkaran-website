@@ -20,7 +20,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nyalkaran-website.vercel.app"),
 
-  title: "Nyalkaran Technosoft LLP | Idea to Product",
+  title: "Nyalkaran Technosoft LLP | Software & Web Solutions",
 
   description:
     "Nyalkaran Technosoft LLP is a digital growth and technology partner helping businesses build websites, software, mobile applications and digital solutions.",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Nyalkaran Technosoft LLP | Idea to Product",
+    title: "Nyalkaran Technosoft LLP | Software & Web Solutions",
     description:
       "Nyalkaran Technosoft LLP is a digital growth and technology partner helping businesses build websites, software, mobile applications and digital solutions.",
     url: "https://nyalkaran-website.vercel.app/",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Nyalkaran Technosoft LLP | Idea to Product",
+    title: "Nyalkaran Technosoft LLP | Software & Web Solutions",
     description:
       "Nyalkaran Technosoft LLP is a digital growth and technology partner helping businesses build websites, software, mobile applications and digital solutions.",
     images: ["/og-image.png"],
